@@ -1,0 +1,656 @@
+// @use 'sass:math';
+
+// //TO %
+// @function prc($pxOne, $pxTwo) {
+//     $result: math.div($pxOne, $pxTwo) * 100%;
+//     @return $result;
+// }
+
+// //REM
+// @function rem($px) {
+//     $result: math.div($px, 16) + rem;
+//     @return $result;
+// }
+
+// //EM
+// @function em($px) {
+//     $result: math.div($px, 16) + em;
+//     @return $result;
+// }
+
+
+// @import 'vars';
+// @import 'fonts';
+@import '_reset';
+// @import 'libs';
+@import '_global';
+
+
+
+
+
+
+.header {
+    &__inner {
+        display: flex;
+    }
+    &__logo {
+        max-width: 17.8rem;
+        height: 5rem;
+        margin-top: 6.3rem;
+        margin-right: 14.6rem;
+    }
+    .menu {
+        // position: relative;
+        &__btn {
+            display: none;
+            position: absolute;
+            // display: block;
+            // width: 0px;
+            // height: 0px;
+            cursor: pointer; 
+        }
+        &__btn span {
+            display: block;
+            height: 0.3rem;
+            width: 100%;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 1.4rem;
+        }
+        &__btn::after,
+        &__btn::before {
+            content: "";
+            position: absolute;
+            width: 4rem;
+            height: 0.3rem;
+            background-color: #000;
+            left: 0;
+        }
+        &__btn::before {
+            top: 0;
+        }
+        &__btn::after {
+            bottom: 0;
+        }
+    }
+    .menu__list {
+        display: flex;
+            margin-top: 7.2rem;
+            position: relative;
+            width: 12rem;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 3rem;
+            color: #172F53;
+            margin-right: 5rem;
+    }
+    .menu__list-item {
+        margin-right: 9.2rem;
+    }
+    .menu__list-link {
+        position: relative;
+    }
+    .menu__list-link::after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 9px;
+        background-image: url(../images/ulli.png);
+        background-repeat: no-repeat;
+        top: 1rem;
+        right: -3.5rem;
+    }
+    nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        margin-left: -3rem;
+    }
+    nav ul li:hover > ul {
+        display:inherit;
+        list-style: none;
+    }
+    nav ul ul li {
+        float:none;
+        display:list-item;
+        position: relative;
+        list-style: none;
+    }
+    &__buttons {
+        display: flex;
+        margin-top: 6.2rem;
+        margin-left: auto;
+    }
+    &__button-sign {
+        
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 3rem;
+        
+        margin-right: 5rem;
+        margin-top: 1rem;
+    }
+    &__sign-link {
+        display: block;
+        color: #172F53;
+    }
+    &__sign-link:hover {
+        color: #02b102;
+    }
+    &__reg-link {
+        display: block;
+        color: #172F53;
+        width: 13.4rem;
+        height: 4.9rem;
+        border: 0.1rem solid #000000;
+        border-radius: 0.5rem;
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 3rem;
+        text-align: center;
+        padding-top: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+    &__reg-link:hover {
+        border: none;
+        background-color: #017e01;
+        color: #fff;
+    }
+}
+
+.top {
+    height: 100.0rem;
+    margin-top: -11.5rem;
+    z-index: -1;
+    position: relative;
+    background-color: #daf9da;
+    &__inner {
+        display: flex;
+    }
+    &__title {
+        width: 68.4rem;
+        font-weight: 700;
+        font-size: 7.2rem;
+        line-height: 10.8rem;
+        color: #172F53;
+        margin-top: 29.3rem;
+        margin-bottom: 4.6rem;
+    }
+    &__text {
+        width: 68.6rem;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: #7D7D7D;
+    }
+    &__image {
+        position: relative;
+        margin-left: 21.1rem;
+        margin-top: 14rem;
+    }
+    &__bg-1 {
+        margin-top: -56.9rem;
+        margin-left: 17.4rem;
+    }
+    &__bg-2 {
+        margin-left: 77.9rem;
+    margin-top: -7.7rem;
+    }
+    &__bg-3 {
+        margin-top: -23.2rem;
+        margin-left: 70.5rem;
+    }
+    &__bg-4 {
+        margin-top: 41.9rem;
+        margin-left: 71.3rem;
+    }
+    &__bg-5 {
+        position: absolute;
+        z-index: -10;
+        margin-top: -51.3rem;
+        margin-left: 62.8rem;
+    }
+    &__bg-6 {
+        margin-left: 13.9rem;
+        margin-top: -20.8rem;
+    }
+    &__bg-7 {
+        position: absolute;
+        z-index: -15;
+        height: 33.7rem;
+        width: 75rem;
+        margin-left: 30rem;
+        margin-top: -27rem;
+    }
+    &__form {
+        width: 148.9rem;
+        height: 32.8rem;
+        background-color: #fff;
+        box-shadow: 0.8rem 0.8rem 10rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 2rem;
+        margin-left: 8rem;  
+        margin-top: -15rem;
+    }
+    &__form-title {
+        font-weight: 600;
+        font-size: 3.5rem;
+        line-height: 5.2rem;
+        color: #172F53;
+        padding-top: 4.3rem;
+        padding-left: 7.1rem;
+    }
+    &__form-text {
+        font-weight: 400;
+        font-size: 2.5rem;
+        padding-left: 7.1rem;
+        margin-bottom: 3rem;
+    }
+    &__name {
+        width: 91.3rem;
+        height: 10rem;
+        background-color: #EFEFEF;
+        border-radius: 1rem;
+        margin-left: 7.1rem;
+        border: none;
+        outline: none;
+        margin-right: 9.5rem;
+    }
+    &__name::placeholder {
+        font-weight: 400;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        color: #9F9F9F;
+        padding-left: 4rem;
+    }
+    &__wrapper {
+        display: flex;
+    }
+    &__button {
+        cursor: pointer;
+    }
+    &__btn {
+        display: block;
+        cursor: pointer;
+        width: 33.7rem;
+        height: 10rem;
+        background-color: #02b102;
+        border-radius: 1rem;
+        border: none;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        text-align: center;
+        color: #fff;
+        transition: all 0.3s ease-in;
+        position: relative;
+    }
+   
+    &__btn:hover {
+        background-color: #013a01;
+    }
+    &__button:hover {
+        background-color: #013a01;
+    }
+}
+
+.offer {
+    &__subtitle {
+        width: 19.3rem;
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: #a9a9a9;
+        margin: 0 auto;
+        margin-top: 35.5rem;
+    }
+    &__title {
+        width: 85.2rem;
+        margin: 0 auto;
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        color: #172F53;
+        margin-top: 1rem;
+        text-align: center;
+        margin-bottom: 9.4rem;
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 35rem;
+        height: 41.7rem;
+        background-color: #daf9da;
+        border-radius: 2rem;
+        transition: all 0.5s ease-in;
+    }
+    &__item-title {
+        margin-top: 3rem;
+        margin-left: 3rem;
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 4.8rem;
+        color: #172F53;
+        margin-bottom: 3.4rem;
+    }
+    &__item-img {
+        width: 12rem;
+        height: 12rem;
+        background-color: #fff;
+        box-shadow: 1.8rem 1.8rem 5rem rgba(0, 0, 0, 0.05);
+        border-radius: 7.5rem;
+        margin-left: 3rem;
+        position: relative;
+        margin-bottom: 4rem;
+    }
+    &__item-icon {
+        position: absolute;
+        display: block;
+        top: 3.2rem;
+        left: 3.2rem;
+    }
+    &__item-icon-2 {
+        position: absolute;
+        display: block;
+        top: 3.8rem;
+        left: 3.8rem;
+    }
+    &__item-text {
+        margin-left: 3rem;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 3.4rem;
+        color: #a9a9a9
+    }
+    &__item-text span {
+        color: #172F53;
+        font-weight: 600;
+    }
+    &__item:hover {
+        background-color: #02b102;
+        box-shadow: 0.8rem 0.8rem 10rem 1rem rgba(0, 0, 0, 0.1);
+        .offer__item-title {
+            color: #fff;
+        }
+        .offer__item-text span {
+            color: #fff;
+        }
+    }
+}
+
+.account {
+    &__inner {
+        margin-top: 24rem;
+        display: flex;
+    }
+    &__title {
+        width: 84.5rem;
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        color: #172F53;
+    }
+    &__title-2 {
+        width: 88rem;
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        color: #172F53;
+        margin-bottom: 4.5rem;
+    }
+    &__text {
+        width: 95rem;
+        font-weight: 400;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: #7D7D7D;
+        margin-bottom: 6.5rem;
+    }
+    &__button {
+        display: block;
+        width: 46.5rem;
+        height: 10rem;
+        background: #02b102;
+        border-radius: 1rem;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        color: #fff;
+        padding-top: 3rem;
+        padding-left: 7.3rem;
+        position: relative;
+        transition: all 0.5s ease;
+    }
+    &__button::after {
+        content: '';
+        position: absolute;
+        background-image: url(../images/vector.png);
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 25px;
+        top: 3.8rem;
+        right: 6.5rem;
+    }
+    &__button:hover {
+        background-color: #017e01
+    }
+    &__images {
+        width: 100%;
+        margin-left: 3.6rem;
+        background-image: url(../images/account-bg.svg);
+        background-repeat: no-repeat;
+        background-position: 7.8rem 0.8rem;
+        
+        z-index: -1;
+    }
+    &__image-text {
+        width: 11.5rem;
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        margin-top: -7rem;
+        padding-top: 4.5rem;
+        padding-left: 6rem;
+    }
+    &__image-text span {
+        width: 11.5rem;
+        font-weight: 400;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        text-align: center;
+        color: #fff;
+        padding-left: 2.3rem;
+    }
+    &__image-text::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 248px;
+        height: 248px;
+        background-image: url(../images/account-img1.png);
+        top: 0;
+        left: 0;
+    }
+    &__image-1 {
+        margin-left: 38rem;
+        margin-top: -19.6rem;
+    }
+    &__image-2 {
+        margin-left: 56.9rem;
+        margin-top: -1.6rem;
+    }
+    &__image-3 {
+        margin-top: 22.4rem;
+        margin-left: 15rem;
+    }
+    &__image-4 {
+        margin-left: 48.4rem;
+        margin-top: -14rem;
+    }
+    &__image-5 {
+        margin-left: 12.8rem;
+        margin-top: -10rem;
+    }
+}
+
+.companies {
+    margin-top: 17.8rem;
+    &__subtitle {
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        width: 17.5rem;
+        margin: 0 auto;
+        color: #a9a9a9;
+        margin-bottom: 1rem;
+    }
+    &__title {
+        width: 70rem;
+        font-weight: 700;
+        font-size: 5.2rem;
+        line-height: 7.8rem;
+        color: #172F53;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 9.4rem;
+
+    }
+    &__items {
+        width: 148.9rem;
+        height: 30rem;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0.8rem 0.8rem 10rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 2rem;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5.2rem;
+        padding-right: 5.2rem;
+        padding-top: 10.5rem;
+    }
+    &__icon {
+        margin-left: 4.4rem;
+        margin-right: 4.4rem;
+    }
+    .icon-1 {
+        width: 28.3rem;
+        height: 8.3rem;
+    }
+    .icon-2 {
+        width: 23.4rem;
+        height: 8.4rem;
+    }
+    .icon-3 {
+        width: 26.1rem;
+        height: 8.9rem;
+    }
+    .icon-4 {
+        width: 30rem;
+        height: 4.8rem;
+        margin-top: 2rem;
+    }
+}
+
+.footer {
+    margin-top: 18.5rem;
+    background-color: #013a01;
+    background-image: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: bottom;
+    background-position: bottom;
+    height: 81.5rem;
+    &__inner {
+        display: flex;
+        margin-top: 9.5rem;
+    }
+    &__info {
+        margin-left: 2rem;
+    }
+    &__info-title {
+        font-weight: 700;
+        font-size: 2.7rem;
+        line-height: 4rem;
+        color: #fff;
+        margin-bottom: 5.4rem;
+    }
+    &__info-item {
+        width: 24.7rem;
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        color: #fff;
+        margin-bottom: 3rem;
+    }
+    &__pro {
+        margin-left: 19.6rem;
+        width: 24.6rem;
+    }
+    &__pro-title {
+        width: 24.6rem;
+        font-weight: 700;
+        font-size: 2.7rem;
+        line-height: 4rem;
+        color: #fff;
+        margin-bottom: 5.4rem;
+    }
+    &__pro-item {
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        color: #fff;
+        margin-bottom: 3rem;
+    }
+    &__contact {
+        width: 36.6rem;
+        margin-left: 24.7rem;
+    }
+    &__contact-title {
+        font-weight: 700;
+        font-size: 2.7rem;
+        line-height: 4rem;
+        color: #fff;
+        margin-bottom: 5.4rem;
+    }
+    &__contact-address,
+    &__contact-email {
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3.8rem;
+        margin-bottom: 3rem;
+        color: #fff;
+    }
+    &__app {
+        margin-left: 11.3rem;
+    }
+    &__app-title {
+        width: 20.3rem;
+        font-weight: 700;
+        font-size: 2.7rem;
+        line-height: 4rem;
+        color: #fff;
+        margin-bottom: 5.4rem;
+    }
+    &__app-img {
+        margin-bottom: 2.5rem;
+        width: 20.3rem;
+        height: 6.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@import '_media';
